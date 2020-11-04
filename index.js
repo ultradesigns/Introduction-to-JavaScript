@@ -206,44 +206,49 @@ var ca=Math.floor(Math.random()*2);
 var cv=o[ca];
 console.log("The computer as chosen "+cv);
 
-if(cv==user){
-  console.log("Its a Draw.")
-}
+console.log(game(user, ca));
 
-else if (cv=="Rock"){
-  if(user=="Paper"||user=="paper"){
-  console.log("You Win!");
-}
-}
-
-else if (cv=="Rock")
-{if(user=="Scissors"||user=="scissors"){console.log("You Loose!")}}
-
-else if (cv=="Paper"){
-  if(user=="Rock"||user=="rock"){console.log("You Win! ");
-}
-}
-
-else if (cv=="Paper"){
-  if(user=="Scissors"||user=="scissors"){
-    console.log("You loose! ");
+function game(){
+  if(cv==user){
+    console.log("Its a Draw.")
   }
+  
+  else if (cv=="Rock"){
+    if(user=="Paper"||user=="paper"){
+    console.log("You Win!");
+  }
+  }
+  
+  else if (cv=="Rock")
+  {if(user=="Scissors"||user=="scissors"){console.log("You Loose!")}}
+  
+  else if (cv=="Paper"){
+    if(user=="Rock"||user=="rock"){console.log("You Win! ");
+  }
+  }
+  
+  else if (cv=="Paper"){
+    if(user=="Scissors"||user=="scissors"){
+      console.log("You loose! ");
+    }
+  }
+  
+  else if (cv=="Scissors"){ 
+    if(user=="Rock"||user=="rock"){
+      console.log("You win! Yeeeeeet! Congrats");
+    }
+  }
+  
+  else if (cv=="Scissors"){
+    if(user=="paper"||user=="Paper"){
+      console.log("You loose! Get rekt");
+    }
+  }
+                             
+  else
+  {console.log("Try again!")}
 }
 
-else if (cv=="Scissors"){ 
-  if(user=="Rock"||user=="rock"){
-    console.log("You win! Yeeeeeet! Congrats");
-  }
-}
-
-else if (cv=="Scissors"){
-  if(user=="paper"||user=="Paper"){
-    console.log("You loose! Get rekt");
-  }
-}
-                           
-else
-{console.log("Try again!")}
 
 
   
