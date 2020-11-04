@@ -7,7 +7,7 @@ When doing these tasks, we recommend using console.log to test the output of you
 This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
 returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
-
+console.log("testing");
 /*
 Task 1a - Voting Age
 
@@ -17,7 +17,18 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge= 18;
 
+if (votingAge >= 18){
+  console.log("Is of age"+" "+"'True'");
+}
+
+
+//running test
+var num1=5;
+var num2=5;
+var num3= num1+num2;
+console.log(num3);
 
 
 /*
@@ -30,6 +41,14 @@ Do the following:
 
    HINT: no function required
 */
+
+var var1="2";
+var var2="5";
+
+if(var2 > var1) {
+  let var1 = var2;
+  console.log(var1);
+}
 
 
 
@@ -46,6 +65,21 @@ Do the following:
    HINT: look up the Number method
 */
 
+var stringOfNumbers="1999";
+
+//returns string
+console.log("string of numbers: " + stringOfNumbers);
+
+//returns number
+console.log("converts string to a number" + " " +Number(stringOfNumbers));
+
+
+//string concatenation
+
+console.log(`sting of numbers "${stringOfNumbers}": this method converts a sting to a number #${Number(stringOfNumbers)}`)
+
+
+
 
 
 
@@ -58,9 +92,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(a, b){
     /*add your code here*/
+    return a * b;
   }
+
+  console.log("returns a number * by a number: " + "a * b = "+multiply(5,5));
 
 
 
@@ -74,9 +111,13 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
     /*add your code here*/
+    return age * 7;
 }
+
+console.log("My dogs age in doggie years is: "+ dogYears(3));
+console.log(`This is my doggies age in doggie years is: ${dogYears(3)}`);
 
 
 
@@ -107,12 +148,38 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
     /*add your code here*/
-  }
+    if(age>=1 && weight<=5){
+        return weight*0.05;
+      }else if(age>=1 && weight<=10){
+        return weight*0.04;
+      }else if(age>=1 && weight<=15){
+        return weight*0.03;
+      }else if(age>=1 && weight>15){
+        return weight*0.02;
+      } else if(age<1 && age>0.58){
+            return weight*0.04;
+        } else if(age<1 && age>0.33){
+            return weight*0.05;
+        } else if(age>=1 && age>0.166){
+            return weight*0.10;
+        }else if(age<0.166){
+            console.log("Mothers Milk");
+        } 
+      }
+
+      console.log(hungryDog(2,0.34));
+      console.log(hungryDog(1,.15));
+      console.log(hungryDog(15,1));
+      console.log(hungryDog(14,1));
+      console.log(hungryDog(10,1));
+      console.log(hungryDog(5,1));
+      console.log(hungryDog(4.9,1));
+      console.log(hungryDog(16,1));
 
 
-
+ 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -132,9 +199,53 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+
+var user= "Scissors";
+var o=["Rock","Paper","Scissors"];
+var ca=Math.floor(Math.random()*2);
+var cv=o[ca];
+console.log("The computer as chosen "+cv);
+
+if(cv==user){
+  console.log("Its a Draw.")
 }
+
+else if (cv=="Rock"){
+  if(user=="Paper"||user=="paper"){
+  console.log("You Win!");
+}
+}
+
+else if (cv=="Rock")
+{if(user=="Scissors"||user=="scissors"){console.log("You Loose!")}}
+
+else if (cv=="Paper"){
+  if(user=="Rock"||user=="rock"){console.log("You Win! ");
+}
+}
+
+else if (cv=="Paper"){
+  if(user=="Scissors"||user=="scissors"){
+    console.log("You loose! ");
+  }
+}
+
+else if (cv=="Scissors"){ 
+  if(user=="Rock"||user=="rock"){
+    console.log("You win! Yeeeeeet! Congrats");
+  }
+}
+
+else if (cv=="Scissors"){
+  if(user=="paper"||user=="Paper"){
+    console.log("You loose! Get rekt");
+  }
+}
+                           
+else
+{console.log("Try again!")}
+
+
   
   
 
@@ -149,9 +260,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilo){
     /*add your code here*/
+    var miles = kilo * 0.62137119224;
+    return miles;
   }
+
+  console.log(miles(5));
+
 
 
 
