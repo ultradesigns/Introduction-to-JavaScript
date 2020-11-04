@@ -200,15 +200,14 @@ Use the game function below to do the following:
 */
 
 
-var user= "Scissors";
+// var user= "Scissors";
 var o=["Rock","Paper","Scissors"];
 var ca=Math.floor(Math.random()*2);
-var cv=o[ca];
-console.log("The computer as chosen "+cv);
 
-console.log(game(user, ca));
+var lance="Scissor";
 
-function game(){
+
+function game(user,cv){
   if(cv==user){
     console.log("Its a Draw.")
   }
@@ -249,6 +248,8 @@ function game(){
   {console.log("Try again!")}
 }
 
+console.log(game(lance, ca));
+
 
 
   
@@ -284,9 +285,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeter){
     /*add your code here*/
+    let feet= centimeter/ 30.48;
+    return feet;
   }
+  console.log(1);
  
 
 
