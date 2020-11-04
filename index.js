@@ -202,8 +202,8 @@ Use the game function below to do the following:
 
 // var user= "Scissors";
 // var selection=["Rock","Paper","Scissors"];
-var computer=Math.floor((Math.random()*2));
-var user=Math.floor((Math.random()*2));
+var computer=Math.floor((Math.random()*3));
+var user=Math.floor((Math.random()*3));
 
 
 
