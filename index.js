@@ -201,46 +201,46 @@ Use the game function below to do the following:
 
 
 // var user= "Scissors";
-var o=["Rock","Paper","Scissors"];
-var ca=Math.floor(Math.random()*2);
+// var selection=["Rock","Paper","Scissors"];
+var computer=Math.floor((Math.random()*2));
+var user=Math.floor((Math.random()*2));
 
-var lance="Scissor";
 
 
-function game(user,cv){
-  if(cv==user){
+function game(user,computer){
+  if(computer==user){
     console.log("Its a Draw.")
   }
   
-  else if (cv=="Rock"){
+  else if (computer=="Rock"){
     if(user=="Paper"||user=="paper"){
     console.log("You Win!");
   }
   }
   
-  else if (cv=="Rock")
+  else if (computer=="Rock")
   {if(user=="Scissors"||user=="scissors"){console.log("You Loose!")}}
   
-  else if (cv=="Paper"){
+  else if (computer=="Paper"){
     if(user=="Rock"||user=="rock"){console.log("You Win! ");
   }
   }
   
-  else if (cv=="Paper"){
+  else if (computer=="Paper"){
     if(user=="Scissors"||user=="scissors"){
       console.log("You loose! ");
     }
   }
   
-  else if (cv=="Scissors"){ 
+  else if (computer=="Scissors"){ 
     if(user=="Rock"||user=="rock"){
-      console.log("You win! Yeeeeeet! Congrats");
+      console.log("You win!");
     }
   }
   
-  else if (cv=="Scissors"){
+  else if (computer=="Scissors"){
     if(user=="paper"||user=="Paper"){
-      console.log("You loose! Get rekt");
+      console.log("You loose!");
     }
   }
                              
@@ -248,7 +248,7 @@ function game(user,cv){
   {console.log("Try again!")}
 }
 
-console.log(game(lance, ca));
+console.log(game(user, computer));
 
 
 
