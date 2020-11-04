@@ -205,8 +205,6 @@ Use the game function below to do the following:
 var computer=Math.floor((Math.random()*3));
 var user=Math.floor((Math.random()*3));
 
-
-
 function game(user,computer){
   if(computer==user){
     console.log("Its a Draw.")
@@ -305,12 +303,15 @@ Using the annoyingSong function below do the following:
 */
 
 
-
+var number = 99;
 function annoyingSong(){
         /*add your code here*/
-        for (number = 99; number >= 0; number--){
+        for (i = 99; i >= 1; i--){
+          
           console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number} bottles of soda on the wall"`);
+          --number;
         }
+        return;
      }
           console.log(annoyingSong());
 
